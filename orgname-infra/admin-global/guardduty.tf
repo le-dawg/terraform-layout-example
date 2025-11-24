@@ -46,7 +46,7 @@ resource "aws_guardduty_organization_configuration" "main_useast1" {
 # too much of a burden on your on-call team.
 
 module "guardduty_notifications_uswest2" {
-  source  = "trussworks/guardduty-notifications/aws"
+  source  = "Solution8/guardduty-notifications/aws"
   version = "~> 6.0.0"
 
   pagerduty_notifications = false
@@ -59,7 +59,7 @@ module "guardduty_notifications_useast1" {
     aws = aws.us-east-1
   }
 
-  source  = "trussworks/guardduty-notifications/aws"
+  source  = "Solution8/guardduty-notifications/aws"
   version = "~> 6.0.0"
 
   pagerduty_notifications = false

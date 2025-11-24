@@ -5,7 +5,7 @@ data "aws_iam_account_alias" "current" {}
 #
 
 module "logs" {
-  source  = "trussworks/logs/aws"
+  source  = "Solution8/logs/aws"
   version = "~> 18.0.0"
 
   default_allow = false
@@ -22,7 +22,7 @@ module "logs" {
 #
 
 module "config" {
-  source  = "trussworks/config/aws"
+  source  = "Solution8/config/aws"
   version = "~> 8.0"
 
   config_name        = format("%s-config-%s", data.aws_iam_account_alias.current.account_alias, var.region)
@@ -52,7 +52,7 @@ resource "aws_guardduty_invite_accepter" "member" {
 # account to give them privileges.
 
 module "infra_role" {
-  source  = "trussworks/iam-cross-acct-dest/aws"
+  source  = "Solution8/iam-cross-acct-dest/aws"
   version = "4.0.0"
 
   iam_role_name     = "infra"
@@ -60,7 +60,7 @@ module "infra_role" {
 }
 
 module "engineer_role" {
-  source  = "trussworks/iam-cross-acct-dest/aws"
+  source  = "Solution8/iam-cross-acct-dest/aws"
   version = "4.0.0"
 
   iam_role_name     = "engineer"

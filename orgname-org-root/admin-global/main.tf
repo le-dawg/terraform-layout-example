@@ -7,7 +7,7 @@ data "aws_iam_account_alias" "current" {}
 #
 
 module "logs" {
-  source  = "trussworks/logs/aws"
+  source  = "Solution8/logs/aws"
   version = "18.0.0"
 
   default_allow = false
@@ -29,7 +29,7 @@ module "logs" {
 #
 
 module "cloudtrail" {
-  source         = "trussworks/cloudtrail/aws"
+  source         = "Solution8/cloudtrail/aws"
   version        = "5.3.0"
   org_trail      = true
   s3_bucket_name = module.logs.aws_logs_bucket
@@ -40,7 +40,7 @@ module "cloudtrail" {
 #
 
 module "config" {
-  source  = "trussworks/config/aws"
+  source  = "Solution8/config/aws"
   version = "~> 8.0"
 
   config_name        = format("%s-config-%s", data.aws_iam_account_alias.current.account_alias, var.region)

@@ -4,7 +4,7 @@ The `id` account in an AWS Organization is unique because it is intended
 only for the maintenance of IAM users that will be used to access the
 other accounts in the AWS Organization. No other resources should be
 configured here. For more information, please refer to the Engineering
-Playbook on [AWS Organization Patterns](https://github.com/trussworks/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-id-account).
+Playbook on [AWS Organization Patterns](https://github.com/Solution8/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-id-account).
 
 ## Setting Up aws-vault
 

@@ -34,9 +34,9 @@ resource "aws_organizations_organizational_unit" "suspended" {
 }
 
 # The org-scp module lets us add some common SCPs to our organization;
-# see the README at https://github.com/trussworks/terraform-aws-org-scp
+# see the README at https://github.com/Solution8/terraform-aws-org-scp
 module "org_scps" {
-  source  = "trussworks/org-scp/aws"
+  source  = "Solution8/org-scp/aws"
   version = "~> 1.6.0"
 
   deny_root_account_target_ids     = [aws_organizations_organizational_unit.main.id]

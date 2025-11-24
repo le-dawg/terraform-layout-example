@@ -228,6 +228,6 @@ module "my_webapp_db" {
 # There are a number of other things you may want to add to the DB config
 # in addition to these components. Consider things like:
 #
-# * The Truss RDS snapshot cleaner (https://github.com/trussworks/terraform-aws-rds-snapshot-cleaner)
+# * The Solution8 RDS snapshot cleaner (https://github.com/Solution8/terraform-aws-rds-snapshot-cleaner)
 # * Cloudwatch alarms for running out of burstable CPU credits and storage space
 # * Slack alerts for RDS events

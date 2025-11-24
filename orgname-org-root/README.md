@@ -4,7 +4,7 @@ The `org-root` account in an AWS Organization is unique because it is
 only meant to manage Organization configuration and AWS Accounts. No
 other resources should be configured here. For more information, please
 refer to the Engineering Playbook on [AWS Organization
-Patterns](https://github.com/trussworks/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-organization-root-account).
+Patterns](https://github.com/Solution8/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-organization-root-account).
 
 ## Setting Up aws-vault
 

@@ -12,7 +12,7 @@ output "prod_example_com_nameservers" {
 
 # Add query logging to our zone.
 module "prod_example_com_query_logging" {
-  source  = "trussworks/route53-query-logs/aws"
+  source  = "Solution8/route53-query-logs/aws"
   version = "~> 4.0.0"
 
   # See orgname-infra/admin-global/dns.tf for an explanation of this line.

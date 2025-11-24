@@ -40,8 +40,8 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| alb\_my\_webapp | trussworks/alb-web-containers/aws | ~> 7.0.0 |
-| ecs\_service\_my\_webapp | trussworks/ecs-service/aws | ~> 6.6.0 |
+| alb\_my\_webapp | Solution8/alb-web-containers/aws | ~> 7.0.0 |
+| ecs\_service\_my\_webapp | Solution8/ecs-service/aws | ~> 6.6.0 |
 | my\_webapp\_db | terraform-aws-modules/rds/aws | ~> 5.0 |
 
 ## Resources

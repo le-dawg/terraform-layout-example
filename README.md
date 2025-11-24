@@ -1,6 +1,6 @@
 # terraform-layout-example
 
-This repository is meant to serve as an example of how Truss builds out
+This repository is meant to serve as an example of how Solution8 builds out
 repositories for Terraform deployments. We've taken care to add as much
 documentation and code comments around _why_ we do things the way they
 are outlined here as possible, so that newcomers to these patterns can
@@ -78,10 +78,10 @@ Using AWS Organizations is highly recommended for all our projects. They
 provide a way to handle consolidated billing, compartmentalization of
 environments and permissions, and a variety of other advantages. For a
 full discussion of how to set up an AWS Organization properly, see these
-resources in the Truss Engineering Playbook:
+resources in the Solution8 Engineering Playbook:
 
-- [AWS Organizations Patterns](https://playbook.truss.dev/docs/infrasec/aws/aws-organizations)
-- [AWS Organizations Bootstrap Guide](https://playbook.truss.dev/docs/infrasec/aws/org-bootstrap)
+- [AWS Organizations Patterns](https://playbook.Solution8.dev/docs/infrasec/aws/aws-organizations)
+- [AWS Organizations Bootstrap Guide](https://playbook.Solution8.dev/docs/infrasec/aws/org-bootstrap)
 
 ## AWS Accounts
 
@@ -96,7 +96,7 @@ The following files are expected to be found:
 ### The bootstrap Directory
 
 When initially creating Terraform infrastructure, we use the
-[terraform-aws-bootstrap](https://github.com/trussworks/terraform-aws-bootstrap)
+[terraform-aws-bootstrap](https://github.com/Solution8/terraform-aws-bootstrap)
 repository to create the resources needed to set up remote Terraform
 state and locking via DynamoDB. If this is an organization we started
 from scratch, this directory should exist (and if you are setting up

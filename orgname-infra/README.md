@@ -5,7 +5,7 @@ resources used throughout the organization. The most common examples of
 such infrastructure are the root DNS zone and an Atlantis deployment, but
 there may be others more specific to your project. For more information,
 please refer to the Engineering Playbook on [AWS Organization
-Patterns](https://github.com/trussworks/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-id-account).
+Patterns](https://github.com/Solution8/Engineering-Playbook/blob/master/infra/aws/aws-organizations.md#the-id-account).
 
 ## Setting Up aws-vault
 
