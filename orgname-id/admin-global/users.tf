@@ -23,7 +23,7 @@ data "aws_iam_policy_document" "user_assume_role_policy" {
 # This module enforces MFA; any groups defined in this file should
 # be added to the iam_groups argument.
 module "iam_enforce_mfa" {
-  source  = "trussworks/mfa/aws"
+  source  = "Solution8/mfa/aws"
   version = "~> 4.1.0"
 
   iam_groups = ["infra", "engineers", "billing"]
@@ -65,14 +65,14 @@ resource "aws_iam_user" "engineer_users" {
 }
 
 # Here we're defining the groups for the users we created above using
-# the Truss module for this purpose. Note that we are specifying roles
+# the Solution8 module for this purpose. Note that we are specifying roles
 # *outside* this account that these users can assume; these will be
-# defined in those accounts with the Truss' iam-cross-acct-dest module.
+# defined in those accounts with the Solution8' iam-cross-acct-dest module.
 # Doing the role assumption this way avoids the role-chaining we used
 # to use, that would sometimes cause problems (and force short sessions).
 
 module "infra_group" {
-  source  = "trussworks/iam-user-group/aws"
+  source  = "Solution8/iam-user-group/aws"
   version = "3.0.0"
 
   user_list = local.infra_users
@@ -86,7 +86,7 @@ module "infra_group" {
 }
 
 module "billing_group" {
-  source  = "trussworks/iam-user-group/aws"
+  source  = "Solution8/iam-user-group/aws"
   version = "3.0.0"
 
   user_list = local.billing_users
@@ -97,7 +97,7 @@ module "billing_group" {
 }
 
 module "engineers_group" {
-  source  = "trussworks/iam-user-group/aws"
+  source  = "Solution8/iam-user-group/aws"
   version = "3.0.0"
 
   user_list = local.engineer_users

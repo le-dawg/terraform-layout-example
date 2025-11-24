@@ -1,7 +1,7 @@
 # This module forces all specified users/groups to use MFA in order to
 # do pretty much anything except set up MFA.
 module "iam_enforce_mfa" {
-  source  = "trussworks/mfa/aws"
+  source  = "Solution8/mfa/aws"
   version = "~> 4.1.0"
 
   iam_groups = ["admins"]
@@ -26,7 +26,7 @@ locals {
 }
 
 module "admins_group" {
-  source  = "trussworks/iam-user-group/aws"
+  source  = "Solution8/iam-user-group/aws"
   version = "3.0.0"
 
   user_list     = local.admin_users
@@ -107,7 +107,7 @@ resource "aws_iam_policy" "limited_billing_access" {
 # This module gives the id account the ability to allow users to assume
 # the billing role in this account.
 module "billing_role_access" {
-  source  = "trussworks/iam-cross-acct-dest/aws"
+  source  = "Solution8/iam-cross-acct-dest/aws"
   version = "~> 4.0.0"
 
   iam_role_name     = "billing"

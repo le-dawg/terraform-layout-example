@@ -42,7 +42,7 @@ resource "aws_route53_record" "acm_my_webapp_validation" {
 # needs to terminate SSL, such as when we're using client-cert auth.
 
 module "alb_my_webapp" {
-  source  = "trussworks/alb-web-containers/aws"
+  source  = "Solution8/alb-web-containers/aws"
   version = "~> 10.0.0"
 
   name           = "my-webapp"
@@ -173,12 +173,12 @@ resource "aws_ecs_cluster" "app_my_webapp" {
 }
 
 # This is where we're actually defining the Fargate service for this
-# application. The Truss module will seed the task definition for this
+# application. The Solution8 module will seed the task definition for this
 # service with a placeholder helloworld application; we use the CI/CD
 # pipeline to replace that later with the real task definition.
 
 module "ecs_service_my_webapp" {
-  source  = "trussworks/ecs-service/aws"
+  source  = "Solution8/ecs-service/aws"
   version = "~> 8.0.0"
 
   name        = "my-webapp"
@@ -214,7 +214,7 @@ data "aws_kms_alias" "kms_ssm_key" {
 
 # This policy for the ECS task role lets it access the AWS Parameter
 # Store. This isn't strictly necessary, but it's a common pattern at
-# Truss to store environment variables for applications in the Parameter
+# Solution8 to store environment variables for applications in the Parameter
 # Store and retrieve them at runtime with chamber, so this is something
 # we'll see often.
 

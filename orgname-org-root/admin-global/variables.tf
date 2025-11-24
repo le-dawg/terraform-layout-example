@@ -13,7 +13,7 @@ variable "org_email_alias" {
 variable "org_email_domain" {
   description = "Email domain for AWS email"
   type        = string
-  default     = "truss.works"
+  default     = "Solution8.works"
 }
 
 variable "org_name" {
